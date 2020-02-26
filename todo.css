@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+  }
+  head,body{
+    background-image: url(banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    width: 100%;
+  }
+  .header{
+    width:380px;
+    height: 150px;
+    background-image: url(bg.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 15px 15px 0 0;
+    position: relative;
+    text-align: center;
+}
+#date{
+  position: absolute;
+  bottom: 5%;
+  left: 2%;
+  color:white;
+  font-size: 25px;
+}
+.header h1{
+  position: absolute;
+  top:30%;
+  left:25%;
+}
+.header i{
+  position: absolute;
+  font-size: 20px;
+  color:white;
+  right:7%;
+  top:7%;
+}
+.header i:hover{
+  cursor: pointer;
+  text-shadow: 1px 3px 5px #000;
+  transform: rotate(45deg);
+}
+  .container{
+    background-color: white;
+    width:380px;
+    border-radius: 15px 15px 0 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    padding-bottom:2px;
+  }
+  .entrydiv{
+    width: 378px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    box-sizing: border-box;
+  }
+  #todo-entry-box{
+    width:300px;
+    font-size: 20px;
+    border: 0;
+    outline: 0;
+  }
+  #addButton{
+    font-size:30px;
+    color: #4162f6;
+    display: inline;
+    margin-left:5px;
+  }
+  #todo-entry-box{
+    display: inline;
+  }
+   .container #todo-list{
+     width: 380px;
+    height: 250px;
+    overflow: auto;
+    overflow-x: hidden;
+    position: relative;
+  }
+   i.co{
+    position: absolute;
+    font-size: 20px;
+    left:10px;
+}
+.item i.co:hover{
+    cursor: pointer;
+}
+.fa-check-circle{
+    color:#6eb200;
+}
+  .container #todo-list li{
+    width: 380px;
+    list-style-type: none;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    height: 22px;
+    padding: 5px 0;
+    overflow: hidden;
+  }
+  .text{
+    position: absolute;
+    left:20px;
+    font-size: 20px;
+    left: 35px;
+    max-width: 285px;
+    overflow: hidden;
+  }
+  .lineThrough{
+    text-decoration: line-through;
+  }
+  .container .completed{
+   text-decoration: line-through;
+   color: #666;
+  }
+  i.de{
+    position: absolute;
+    font-size: 20px;
+    right:10px;
+}
+.item i.de:hover{
+    color:#af0000;
+    cursor: pointer;
+}
+  @media only screen and (max-width:620px){
+    head,body{
+      background-image: none;
+    }
+    .header{
+      width:100%;
+      height: 200px;
+  }
+    .container{
+      position: relative;
+      min-height: 100vh;
+    }
+    .container, .container #todo-list,.entrydiv{
+      margin: 0;
+      padding: 0%;
+      width: 100%;
+    }
+    .entrydiv{
+      position: absolute;
+      padding: 10px 0;
+      bottom: 0%;
+    }
+  }
+
+  
