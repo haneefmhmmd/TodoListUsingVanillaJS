@@ -15,7 +15,8 @@ reload.addEventListener('click',function(){
 addButton.addEventListener('click',addToDoItem);
 function addToDoItem(){
     const inputText=todoEntryBox.value;
-    if(inputText){
+    let inputValidator=inputText.trim();
+    if(inputValidator!=""){
         addItem(inputText,id,false,false);
         LIST.push({
             text:inputText,
@@ -27,6 +28,9 @@ function addToDoItem(){
         saveList();
         todoEntryBox.value="";
         id++;
+    }
+    else{
+        alert("Invalid input format");
     }
 }
 const CHECK="fa-check-circle";
