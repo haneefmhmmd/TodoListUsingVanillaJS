@@ -10,7 +10,11 @@ let options={weekday:'long',month:'short',day:'numeric'};
 let today=new Date();
 dateElement.innerHTML=today.toLocaleDateString("en-US",options);
 reload.addEventListener('click',function(){
-    localStorage.clear();
+    let todoItem=todoList.children;
+    while(todoItem.length){
+        todoItem.item(0).remove();
+    }
+    localStorage.removeItem("TODOLIST");
 });
 addButton.addEventListener('click',addToDoItem);
 function addToDoItem(){
