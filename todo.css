@@ -136,6 +136,9 @@
       position: relative;
       min-height: 100vh;
     }
+    .container .header{
+      border-radius: 0;
+    }
     .container, .container #todo-list,.entrydiv{
       margin: 0;
       padding: 0%;
