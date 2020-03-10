@@ -16,27 +16,50 @@ reload.addEventListener('click',function(){
     }
     localStorage.removeItem("TODOLIST");
 });
-addButton.addEventListener('click',addToDoItem);
-function addToDoItem(){
-    const inputText=todoEntryBox.value;
-    let inputValidator=inputText.trim();
-    if(inputValidator!=""){
-        addItem(inputText,id,false,false);
-        LIST.push({
-            text:inputText,
-             id: id,
-             done:false,
-             trash:false
-        })
-        console.log(id);
-        saveList();
-        todoEntryBox.value="";
-        id++;
+// addButton.addEventListener('click',addToDoItem);
+document.addEventListener('keypress',function(event){
+    if(event.keyCode===13){
+        const inputText=todoEntryBox.value;
+        let inputValidator=inputText.trim();
+        if(inputValidator!=""){
+            addItem(inputText,id,false,false);
+            LIST.push({
+                text:inputText,
+                 id: id,
+                 done:false,
+                 trash:false
+            })
+            console.log(id);
+            saveList();
+            todoEntryBox.value="";
+            id++;
+        }
+        else{
+            alert("Invalid input format");
+        }
     }
-    else{
-        alert("Invalid input format");
-    }
-}
+
+})
+// function addToDoItem(){
+//     const inputText=todoEntryBox.value;
+//     let inputValidator=inputText.trim();
+//     if(inputValidator!=""){
+//         addItem(inputText,id,false,false);
+//         LIST.push({
+//             text:inputText,
+//              id: id,
+//              done:false,
+//              trash:false
+//         })
+//         console.log(id);
+//         saveList();
+//         todoEntryBox.value="";
+//         id++;
+//     }
+//     else{
+//         alert("Invalid input format");
+//     }
+// }
 const CHECK="fa-check-circle";
 const UNCHECK="fa-circle-thin";
 const LINE_THROUGH="lineThrough"
